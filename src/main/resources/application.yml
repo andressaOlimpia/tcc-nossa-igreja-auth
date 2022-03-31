@@ -1,0 +1,29 @@
+server:
+  port: 9991
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    devtools:
+      restart:
+        enabled: false
+    application:
+      name: nossa-igreja-auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/nossa-igreja
+    username: postgres
+    password: Caribe2018
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        temp:
+          use_jdbc_metadata_defaults: false
+  security:
+    user:
+      enable: false
